@@ -1,6 +1,6 @@
 # my-quarkus-3
 
-A cool quarkus app 3
+A cool quarkus app 3 make a change
 
 ## Running the application in dev mode
 
