@@ -1,0 +1,42 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "my-quarkus-3"
+  description: "A cool quarkus app 3"
+  annotations:
+    argocd/app-name: my-quarkus-3-dev
+    backstage.io/kubernetes-id: my-quarkus-3
+    backstage.io/kubernetes-namespace: my-quarkus-3-dev
+    janus-idp.io/tekton: my-quarkus-3
+    backstage.io/source-location: url:https://github.com/ghrhdh1/my-quarkus-3
+    backstage.io/techdocs-ref: url:https://github.com/ghrhdh1/my-quarkus-3
+    gitlab.com/project-slug: ghrhdh1/my-quarkus-3
+    quay.io/repository-slug: "rhdh1/my-quarkus-3"
+  tags:
+    - java
+    - quarkus
+  links:
+    - url: https://devspaces.apps.cluster-2tgsr.dynamic.redhatworkshops.io/#https://github.com/ghrhdh1/my-quarkus-3
+      title: OpenShift Dev Spaces (VS Code)
+      icon: web
+    - url: https://devspaces.apps.cluster-2tgsr.dynamic.redhatworkshops.io/#https://github.com/ghrhdh1/my-quarkus-3?che-editor=che-incubator/che-idea/latest
+      title: OpenShift Dev Spaces (JetBrains IntelliJ)
+      icon: web
+spec:
+  type: service
+  lifecycle: production
+  owner: "alexgroom"
+  providesApis:
+    - "my-quarkus-3"
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: "my-quarkus-3"
+  description: "A cool quarkus app 3"
+spec:
+  type: openapi
+  lifecycle: production
+  owner: "alexgroom"
+  definition:
+    $text: ./openapi.yaml

@@ -1,0 +1,15 @@
+site_name: my-quarkus-3
+site_description: A cool quarkus app 3
+repo_url: https://github.com/ghrhdh1/my-quarkus-3
+edit_uri: edit/master/docs
+
+plugins:
+  - techdocs-core
+
+# Note for content editors, edit only the section below
+nav:
+  - Onboard a developer to OpenShift: onboard-openshift.md
+  - Application Migration:
+      - Migration Process Overview: application-migration/migration-process-overview.md
+      - Migration Process Steps: application-migration/migration-process-steps.md
+      - Learning Path for Developers: application-migration/learning-path-for-developers.md
