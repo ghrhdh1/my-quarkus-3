@@ -69,5 +69,23 @@ items:
       deployment: tasks
   status:
     loadBalancer: {}
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    creationTimestamp: null
+    labels:
+      app: tasks
+      app.kubernetes.io/component: tasks
+      app.kubernetes.io/instance: tasks
+      app.kubernetes.io/name: tasks
+    name: tasks
+  spec:
+    port:
+      targetPort: 8080-tcp
+    to:
+      kind: ""
+      name: tasks
+      weight: null
+  status: {}
 kind: List
 metadata: {}
