@@ -39,4 +39,4 @@ metadata:
     apicur.io/registry.groupId: turism
 spec:
   definition:
-    $text: http://registry-ui.apps.ocp4.masales.cloud/explore/turism/train-travel-api
+    $text: http://registry-ui.apps.ocp4.masales.cloud/explore/turism/train-travel-api/versions/branch=latest/content
