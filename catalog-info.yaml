@@ -26,13 +26,13 @@ spec:
   type: service
   lifecycle: production
   owner: "alexgroom"
-  providesApis:
-    - "my-quarkus-3"
+  providesApis: [my-quarkus-3]
+
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: "my-quarkus-3"
+  name: my-quarkus-3
   description: "A cool quarkus app 3"
   annotations:
     apicur.io/registry.artifactId: train-travel-api
