@@ -35,11 +35,8 @@ metadata:
   name: "my-quarkus-3"
   description: "A cool quarkus app 3"
   annotations:
-    apicur.io/registry.artifactId: <ARTIFACT_ID>
-    apicur.io/registry.groupId: <GROUP_ID>
+    apicur.io/registry.artifactId: train-travel-api
+    apicur.io/registry.groupId: turism
 spec:
-  type: openapi
-  lifecycle: production
-  owner: "alexgroom"
   definition:
     $text: http://registry-ui.apps.ocp4.masales.cloud/turism/train-travel-api
