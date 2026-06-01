@@ -398,4 +398,13 @@ spec:
   - name: git-auth
     secret:
       secretName: '{{ git_auth_secret }}'
+  taskRunSpecs:
+    - pipelineTaskName: build-container
+      computeResources:
+        requests:
+          memory: "8Gi"
+          cpu: "2"
+        limits:
+          memory: "8Gi"
+          cpu: "4"
 status: {}
