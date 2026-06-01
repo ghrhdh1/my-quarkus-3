@@ -18,15 +18,6 @@ metadata:
   name: my-quarkus-3-e5f64-on-pull-request
   namespace: default-tenant
 spec:
-  taskRunSpecs:
-    - pipelineTaskName: build-container
-      stepSpecs:
-        - name: build
-          computeResources:
-            requests:
-              memory: 8Gi
-            limits:
-              memory: 8Gi      
   params:
   - name: git-url
     value: '{{source_url}}'
@@ -38,6 +29,19 @@ spec:
     value: 5d
   - name: dockerfile
     value: Dockerfile
+
+  pipelineRef:
+    name: my-quarkus-3-e5f64-on-pull-request
+  taskRunSpecs:
+    - pipelineTaskName: build-container
+      stepSpecs:
+        - name: build
+          computeResources:
+            requests:
+              memory: 8Gi
+            limits:
+              memory: 8Gi      
+
   pipelineSpec:
     description: |
       This pipeline is ideal for building demo container images from a Containerfile while maintaining trust after pipeline customization.
