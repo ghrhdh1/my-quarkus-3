@@ -1,7 +1,7 @@
 # ==========================================
 # Stage 1: Build the application
 # ==========================================
-FROM registry.access.redhat.com/ubi8/openjdk-11:1.11 AS builder
+FROM registry.access.redhat.com/ubi8/openjdk-11:1.21 AS builder
 
 USER root
 
@@ -23,7 +23,7 @@ RUN mvn package -DskipTests
 # ==========================================
 # Stage 2: Create the runtime image
 # ==========================================
-FROM registry.access.redhat.com/ubi8/openjdk-11:1.11
+FROM registry.access.redhat.com/ubi8/openjdk-11:1.21
 
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en'
 
